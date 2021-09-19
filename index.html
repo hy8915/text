@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김혜연</title>
+  <style>
+    body {
+            background-color: lightyellow;
+        }
+        .bgcolor--blue {
+            background-color: lightblue;
+        }
+        .bgcolor--gray {
+            background-color: lightgray;
+        }
+        .bg--img{
+          background-image: url('bg_img.jpg');
+        }
+  </style>
+</head>
+<body class>
+  <div class="btns">
+  <button class="btn_toggle">배경색상변경 토글버튼</button>
+  <button class="btn--reset">배경색상 리셋</button>
+  <button class="btn--gray">배경색상변경 그레이</button>
+  <button class="btn--bgimg">배경이미지</button>
+
+  </div>
+  <script>
+  const btnToggle = document.querySelector('.btn_toggle');
+        // addEventiListener (이벤트, 실행함수);
+        btnToggle.addEventListener('click', function () {
+            document.body.classList.toggle('bgcolor--blue');
+            console.log('test');
+        });
+        const btnReset = document.querySelector('.btn--reset');
+        const btnBgGray = document.querySelector('.btn--gray');
+        btnReset.addEventListener('click',function () {
+            document.body.classList.remove('bgcolor--blue');
+            document.body.classList.remove('bgcolor--gray');
+            document.body.classList.remove('bg--img');
+        });
+        btnBgGray.addEventListener('click',function () {
+            document.body.classList.add('bgcolor--gray');
+        });
+        const btnBgImg = document.querySelector('.btn--bgimg');
+        btnBgImg.addEventListener('click',function () {
+            document.body.classList.add('bg--img');
+        });
+  </script>
+
+
+
+</body>
+</html>
